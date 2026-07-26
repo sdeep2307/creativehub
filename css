@@ -1,0 +1,572 @@
+
+/* ===========================
+   Creative Hub - style.css
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#fafafa;
+    color:#333;
+}
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:white;
+    box-shadow:0 3px 10px rgba(0,0,0,.08);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#8B0000;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#333;
+    font-weight:500;
+}
+
+nav a:hover{
+    color:#c0392b;
+}
+
+.cart-icon{
+    position:relative;
+    cursor:pointer;
+    font-size:22px;
+}
+
+#cart-count{
+    position:absolute;
+    right:-10px;
+    top:-10px;
+    background:red;
+    color:white;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:12px;
+}
+
+/* HERO */
+
+.hero{
+    margin-top:75px;
+    height:90vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:8%;
+    background:linear-gradient(135deg,#fff,#ffeaea);
+}
+
+.hero img{
+    width:45%;
+    max-width:550px;
+}
+
+.hero-content{
+    width:45%;
+}
+
+.hero h1{
+    font-size:54px;
+    color:#8B0000;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+    background:#8B0000;
+    color:white;
+    padding:14px 30px;
+    border-radius:40px;
+    text-decoration:none;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#c0392b;
+}
+
+/* PRODUCTS */
+
+#products{
+    padding:70px 8%;
+}
+
+#products h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:38px;
+}
+
+.carousel{
+    display:flex;
+    overflow-x:auto;
+    gap:25px;
+    scroll-behavior:smooth;
+}
+
+.carousel::-webkit-scrollbar{
+    display:none;
+}
+
+.product-card{
+    min-width:300px;
+    background:white;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    overflow:hidden;
+    transition:.4s;
+}
+
+.product-card:hover{
+    transform:translateY(-8px);
+}
+
+.product-card img{
+    width:100%;
+    height:250px;
+    object-fit:cover;
+}
+
+.product-card h3{
+    text-align:center;
+    padding:18px;
+}
+
+.product-card button{
+    width:90%;
+    margin:0 auto 20px;
+    display:block;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    background:#8B0000;
+    color:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.product-card button:hover{
+    background:#c0392b;
+}
+
+/* ABOUT */
+
+#about{
+    background:white;
+    padding:80px 8%;
+    text-align:center;
+}
+
+#about h2{
+    font-size:36px;
+    margin-bottom:25px;
+}
+
+/* CONTACT */
+
+#contact{
+    padding:80px 8%;
+}
+
+#contact h2{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+input,
+textarea{
+    padding:16px;
+    border:1px solid #ddd;
+    border-radius:10px;
+    font-size:16px;
+}
+
+textarea{
+    min-height:120px;
+}
+
+form button{
+    padding:16px;
+    border:none;
+    background:#8B0000;
+    color:white;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+form button:hover{
+    background:#c0392b;
+}
+
+/* CART */
+
+.cart-sidebar{
+    position:fixed;
+    right:20px;
+    top:110px;
+    width:300px;
+    background:white;
+    padding:20px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.15);
+}
+
+.cart-sidebar h2{
+    margin-bottom:20px;
+}
+
+#cart-list li{
+    margin-bottom:10px;
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:65px;
+    height:65px;
+    border-radius:50%;
+    background:#25D366;
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-decoration:none;
+    font-size:34px;
+    box-shadow:0 8px 20px rgba(0,0,0,.25);
+}
+
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero{
+flex-direction:column;
+text-align:center;
+height:auto;
+padding-top:100px;
+}
+
+.hero img{
+width:80%;
+margin-bottom:30px;
+}
+
+.hero-content{
+width:100%;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+nav ul{
+display:none;
+}
+
+.cart-sidebar{
+position:relative;
+width:90%;
+margin:30px auto;
+right:0;
+top:0;
+}
+
+}
+
+// =============================
+// Creative Hub - script.js
+// =============================
+
+const cart = [];
+
+// -----------------------------
+// Add Product
+// -----------------------------
+function addToCart(productName){
+
+    const existing = cart.find(p => p.name === productName);
+
+    if(existing){
+        existing.qty++;
+    }else{
+        cart.push({
+            name:productName,
+            qty:1
+        });
+    }
+
+    updateCart();
+}
+
+// -----------------------------
+// Update Cart
+// -----------------------------
+function updateCart(){
+
+    const list = document.getElementById("cart-list");
+    const counter = document.getElementById("cart-count");
+    const cartBox = document.getElementById("cartItems");
+
+    list.innerHTML="";
+
+    let totalItems=0;
+    let summary="";
+
+    cart.forEach((item,index)=>{
+
+        totalItems += item.qty;
+
+        summary += `${item.name} x ${item.qty}\n`;
+
+        const li=document.createElement("li");
+
+        li.innerHTML=`
+
+        <b>${item.name}</b>
+
+        <br>
+
+        Qty:
+
+        <button onclick="decreaseQty(${index})">-</button>
+
+        ${item.qty}
+
+        <button onclick="increaseQty(${index})">+</button>
+
+        <button onclick="removeItem(${index})">
+
+        ❌
+
+        </button>
+
+        `;
+
+        list.appendChild(li);
+
+    });
+
+    counter.innerText=totalItems;
+
+    cartBox.value=summary;
+
+}
+
+// -----------------------------
+// Increase Quantity
+// -----------------------------
+function increaseQty(index){
+
+    cart[index].qty++;
+
+    updateCart();
+
+}
+
+// -----------------------------
+// Decrease Quantity
+// -----------------------------
+function decreaseQty(index){
+
+    cart[index].qty--;
+
+    if(cart[index].qty<=0){
+
+        cart.splice(index,1);
+
+    }
+
+    updateCart();
+
+}
+
+// -----------------------------
+// Remove Item
+// -----------------------------
+function removeItem(index){
+
+    cart.splice(index,1);
+
+    updateCart();
+
+}
+
+// -----------------------------
+// Checkout Form
+// -----------------------------
+document.getElementById("orderForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+const customer=document.getElementById("name").value;
+
+const phone=document.getElementById("phone").value;
+
+const address=document.getElementById("address").value;
+
+if(cart.length===0){
+
+alert("Please add products to cart.");
+
+return;
+
+}
+
+let products="";
+
+cart.forEach(item=>{
+
+products += `${item.name} x ${item.qty}\n`;
+
+});
+
+// -------------------------
+// EMAIL
+// -------------------------
+
+const subject="New Order - Creative Hub";
+
+const body=
+
+`Customer Name : ${customer}
+
+Phone : ${phone}
+
+Address :
+
+${address}
+
+----------------------
+
+Products Ordered
+
+----------------------
+
+${products}
+
+`;
+
+window.location.href=
+
+`mailto:creativehub.handmade@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+});
+
+// -----------------------------
+// Auto Scroll Carousel
+// -----------------------------
+
+const carousel=document.querySelector(".carousel");
+
+let scrollAmount=0;
+
+setInterval(()=>{
+
+if(!carousel) return;
+
+scrollAmount += 320;
+
+if(scrollAmount>=carousel.scrollWidth-carousel.clientWidth){
+
+scrollAmount=0;
+
+}
+
+carousel.scrollTo({
+
+left:scrollAmount,
+
+behavior:"smooth"
+
+});
+
+},3000);
+
+// -----------------------------
+// WhatsApp Order (Optional)
+// -----------------------------
+function sendWhatsApp(){
+
+if(cart.length===0){
+
+alert("Cart is empty");
+
+return;
+
+}
+
+let msg="Hello Creative Hub,%0A%0AI would like to order:%0A%0A";
+
+cart.forEach(item=>{
+
+msg += `${item.name} x ${item.qty}%0A`;
+
+});
+
+window.open(
+
+"https://wa.me/9821845366?text="+msg,
+
+"_blank"
+
+);
+
+}
